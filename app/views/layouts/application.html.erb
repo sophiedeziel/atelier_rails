@@ -6,10 +6,9 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body class="<%= controller_name %>_controller">
 
 <%= yield %>
 
-<footer>Fait avec amour pour l'atelier à l'ÉTS!!!</footer>
 </body>
 </html>

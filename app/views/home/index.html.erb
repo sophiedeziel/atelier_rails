@@ -1,2 +1,12 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<% @posts.each do |post| %>
+  <article>
+    <h2><%= post.title %></h2>
+    <div class='post-meta'>
+      Last updated: <%= post.created_at %>
+    </div>
+
+    <div class='post-content'>
+      <%= simple_format post.content %>
+    </div>
+  </article>
+<% end %>
